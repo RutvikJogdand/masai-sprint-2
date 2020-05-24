@@ -34,7 +34,8 @@ function makeNewIncomeAmountEntry()
         {
             oneIncomeAmountValue.remove()
             oneIncomeTextValue.remove()
-            arr.pop(storeIncomeAmountValue)
+            arr.splice(0,1)
+           
         }
     
     document.getElementById("listOfIncomeTextValues").append(oneIncomeTextValue) 
@@ -96,7 +97,7 @@ function makeNewExpenseAmountEntry()
         {
             oneExpenseAmountValue.remove()
             oneExpenseTextValue.remove()
-            arr2.pop(storeExpenseAmountValue)
+            arr2.splice(0,1)
         }
 
     document.getElementById('listOfExpenseTextValues').append(oneExpenseTextValue)
