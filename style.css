@@ -1,0 +1,176 @@
+#mainHeader
+{
+    text-align: center;
+    border: 1px solid black;
+    height: 60px;
+    background-color: rgba(6, 18, 88, 0.863);
+    font-size: 30px;
+    color: white;
+    padding-top: 10px;
+    font-family: Corbel;
+}
+
+
+
+#flexBox1
+{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+    background-color: rgba(248, 247, 247, 0.767);
+}
+
+#flexBox1>*
+{
+    margin: 20px;
+}
+
+.amountEntry
+{
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgba(9, 231, 21, 0.664);
+    border: 1px solid rgba(247, 235, 235, 0.753);
+}
+
+.sumOfAmount
+{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    background-color:  rgba(9, 231, 21, 0.664);
+    border: 1px solid rgba(247, 235, 235, 0.753);
+    
+}
+
+.inputFields
+{
+    padding: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    background-color: rgba(222, 222, 228, 0.486);
+    color: rgb(10, 10, 10);
+    border: 1px solid white;
+}
+
+#flexBox2
+{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.listValues
+{
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: rgba(220, 237, 238, 0.774);
+    font-family: Corbel;
+}
+
+.amtdiv, .txtdiv, .expText, .expAmt
+{
+    margin-bottom: 12px;
+
+    border-bottom: 1px solid rgb(155, 150, 150);
+}
+
+.deleteVl2, .deleteVl
+{
+    float: right;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: rgba(250, 43, 43, 0.904);
+    color: white;
+}
+
+#flexBox2>div
+{
+    border: 1px solid rgba(146, 145, 145, 0.815);
+    margin-right: 10px;
+    width: 40%;
+}
+
+#flexBox3
+{
+    display: flex;
+    flex-direction: row;
+    
+    padding: 10px;
+    font-family: Corbel;
+    background-color: rgba(220, 237, 238, 0.774);
+
+}
+
+#flexBox3>div
+{
+    
+    width: 35%;
+    margin-right: 20px;
+}
+
+#balanceLeft
+{
+    padding-left: 10px;
+    color: white;
+}
+
+.displayFinalValues
+{
+    padding: 10px;
+    border: 1px solid rgb(192, 190, 190);
+}
+
+#theCheckBalanceButton
+{
+    background-color: rgb(14, 42, 94);
+    color: ivory;
+}
+
+@media (min-width: 640px) and (max-width: 1227px){
+    .amountEntry, .sumOfAmount, .inputFields
+    {
+        font-size: 14px;
+    }
+
+    .listValues
+    {
+        font-size: 14px;
+    }
+
+    .deleteVl2, .deleteVl
+    {
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 780px){
+
+    .amountEntry, .sumOfAmount, .inputFields
+    {
+        font-size: 12px;
+    }
+
+    .listValues
+    {
+        font-size: 11px;
+    }
+
+    .deleteVl2, .deleteVl
+    {
+        font-size: 11px;
+    }
+
+    #flexBox1, #flexBox3
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

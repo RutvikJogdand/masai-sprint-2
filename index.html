@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Expense Manager</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+
+        <div id="mainHeader">Expense Manager</div>
+
+    <div id="flexBox1">
+        <div class="mainInputFields" id="incomeAmount">  
+
+            <!--Input field to take income text values-->
+            <input type="text" id="incomeTextValues" name="incomeTextValues" class="inputFields" placeholder="Enter income source name">
+
+            <!--Input field to take income amount values-->
+            <input type="number" id="incomeAmountValues" name="incomeAmountValues" class="inputFields" placeholder="enter amount">
+
+            <button class="amountEntry" onclick="makeNewIncomeAmountEntry()">Create new income item</button> <!--Each click displays the amount value-->
+
+            <button class="sumOfAmount" onclick="sumOfIncomeAmountValues()">Find Sum of income items</button>
+        </div>
+
+        <div class="mainInputFields" id="expenseAmount"> 
+            
+            <!--Input field to take expense text values-->
+            <input type="text" id="expenseTextValues" name="expenseTextValues" class="inputFields" placeholder="Enter expense type">
+
+            <!--Input field to take income amount values-->
+            <input type="number" id="expenseAmountValues" name="expenseAmountValues" class="inputFields" placeholder="enter amount">
+
+            <button class="amountEntry" onclick="makeNewExpenseAmountEntry()">Create new expense item</button> <!--Each click displays the amount value-->
+
+            <button class="sumOfAmount" onclick="sumOfExpenseAmountValues()">Find Sum of expense items</button>
+        </div>
+    </div>
+
+    <div id="flexBox2">
+        <div class="listValues" id="listOfIncomeTextValues"> <!--Shows the income text values as 'div' elements--> 
+            Income Source Name:
+            <hr>
+        </div>
+
+        <div class="listValues" id="listOfIncomeAmountValues"> <!--Shows the income amount values as 'div' elements--> 
+            Income Amount( in ₹):
+            <hr>
+        </div>
+
+        <div class="listValues" id="listOfExpenseTextValues"> <!--Shows the expense texts values as 'div' elements--> 
+            Expense Name:
+            <hr>
+        </div>
+
+        <div class="listValues" id="listOfExpenseAmountValues"> <!--Shows the expense amount values as 'div' elements--> 
+            Expense Amount(in ₹):
+            <hr>
+        </div>
+    </div>
+    <hr>
+    <div id="flexBox3">
+        <span>Total Earned:</span>
+        <div class="displayFinalValues" id="totalOfIncomeAmount"> <!--Shows the final income amouunt--> 
+            Total Income Earned
+        </div>
+
+        <span>Total Spent:</span>
+        <div class="displayFinalValues" id="totalOfExpenseAmount"> <!--Shows the final income amouunt--> 
+            Sum Of All Expenses
+        </div>
+
+        <span>Balance Left:</span>
+        <div class="displayFinalValues" id="balanceLeft">
+            Your Balance Left
+        </div>
+        <button id="theCheckBalanceButton" onclick="checkBalance()">Check Balance</button>
+    </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
