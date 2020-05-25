@@ -1,14 +1,16 @@
 var arr=[]
 
 var arr2=[]
+
+//function to get values, store them into an array and display them one below other. 
             
 function makeNewIncomeAmountEntry()
 {
-    var storeIncomeTextValue= document.getElementById("incomeTextValues").value
+    var storeIncomeTextValue= document.getElementById("incomeTextValues").value //takes text values entered into the input field
 
-    var storeIncomeAmountValue= Number(document.getElementById("incomeAmountValues").value)
+    var storeIncomeAmountValue= Number(document.getElementById("incomeAmountValues").value) //takes amount values entered into the input field
 
-    arr.push(storeIncomeAmountValue)
+    arr.push(storeIncomeAmountValue) //pushes each amount value into an empty array
 
     var oneIncomeAmountValue= document.createElement('div')
 
@@ -34,7 +36,14 @@ function makeNewIncomeAmountEntry()
         {
             oneIncomeAmountValue.remove()
             oneIncomeTextValue.remove()
-            arr.pop(storeIncomeAmountValue)
+            for(i=0;i<arr.length;i++)
+            {
+                if(arr[i]==storeIncomeAmountValue)
+                {
+                    arr[i]=0
+                    break
+                }
+            }
         }
     
     document.getElementById("listOfIncomeTextValues").append(oneIncomeTextValue) 
@@ -96,7 +105,14 @@ function makeNewExpenseAmountEntry()
         {
             oneExpenseAmountValue.remove()
             oneExpenseTextValue.remove()
-            arr2.pop(storeExpenseAmountValue)
+            for(i=0;i<arr2.length;i++)
+            {
+                if(arr2[i]==storeExpenseAmountValue)
+                {
+                    arr2[i]=0
+                    break
+                }
+            }
         }
 
     document.getElementById('listOfExpenseTextValues').append(oneExpenseTextValue)
