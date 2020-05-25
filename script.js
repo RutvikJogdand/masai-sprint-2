@@ -151,20 +151,45 @@ function checkBalance()
 
    var diff= totalOfAllTheIncomes-totalOfAllTheExpenses
 
-   document.getElementById("balanceLeft").innerHTML= diff+"₹"
+   //document.getElementById("balanceLeft").innerHTML= diff+"₹"
 
-   if(diff<=10000)
+   if(diff<=10000&&document.getElementById("totalOfIncomeAmount").innerHTML!=null&&document.getElementById("totalOfIncomeAmount").innerHTML!=""&&document.getElementById("totalOfIncomeAmount").innerHTML!=undefined&&document.getElementById("totalOfExpenseAmount").innerHTML!=null&&document.getElementById("totalOfExpenseAmount").innerHTML!=""&&document.getElementById("totalOfExpenseAmount").innerHTML!=undefined)
    {
+        document.getElementById("balanceLeft").innerHTML= diff+"₹"
        document.getElementById("balanceLeft").style.backgroundColor='red'
 
        document.getElementById("balanceLeft").append(' Low Balance')
    }
 
    
-   else
+   else if(diff==null||diff==undefined&&document.getElementById("totalOfExpenseAmount").innerHTML==null||document.getElementById("totalOfExpenseAmount").innerHTML==undefined&&document.getElementById("totalOfIncomeAmount").innerHTML!=null&&document.getElementById("totalOfIncomeAmount").innerHTML!=undefined&&totalOfAllTheIncomes<=10000)
    {
+    document.getElementById("balanceLeft").innerHTML= totalOfAllTheIncomes+"₹"
+    document.getElementById("balanceLeft").append(' Low Balance')
+    alert("PLease click the (Find sum of expense items button to set sum of expense items to 0)")
+    console.log(totalOfAllTheIncomes)
+   }
+
+   
+   else if(diff>10000&&document.getElementById("totalOfIncomeAmount").innerHTML!=null&&document.getElementById("totalOfIncomeAmount").innerHTML!=""&&document.getElementById("totalOfIncomeAmount").innerHTML!=undefined&&document.getElementById("totalOfExpenseAmount").innerHTML!=null&&document.getElementById("totalOfExpenseAmount").innerHTML!=""&&document.getElementById("totalOfExpenseAmount").innerHTML!=undefined)
+   {
+    document.getElementById("balanceLeft").innerHTML= diff+"₹"
     document.getElementById("balanceLeft").style.backgroundColor='green'
 
     document.getElementById("balanceLeft").append('  You have sufficient balance')
+   }
+
+   else if(diff==null||diff==undefined&&document.getElementById("totalOfExpenseAmount").innerHTML!=null&&document.getElementById("totalOfExpenseAmount").innerHTML!=undefined&&document.getElementById("totalOfIncomeAmount").innerHTML==null||document.getElementById("totalOfIncomeAmount").innerHTML==undefined)
+   {
+    document.getElementById("balanceLeft").innerHTML= "Invalid. You have not entered any income value"
+    alert("You cannot spend if you don't have any income")
+   }
+
+   else if(diff==null||diff==undefined&&document.getElementById("totalOfExpenseAmount").innerHTML==null||document.getElementById("totalOfExpenseAmount").innerHTML==undefined&&document.getElementById("totalOfIncomeAmount").innerHTML!=null&&document.getElementById("totalOfIncomeAmount").innerHTML!=undefined&&totalOfAllTheIncomes>10000)
+   {
+    document.getElementById("balanceLeft").innerHTML= totalOfAllTheIncomes+"₹"
+    document.getElementById("balanceLeft").append(' You have sufficient balance and no expenses')
+    alert("PLease click the (Find sum of expense items button to set sum of expense items to 0)")
+    console.log(totalOfAllTheIncomes)
    }
 }
